@@ -17,8 +17,11 @@ def search():
     url = f"https://test.wikipedia.org/w/api.php?format=json&action=query&list=search&srsearch={searchterm}"
     response = requests.get(url)
 
-    article = json.dumps(response.json(), indent=4)
-    print(article)
+    article = response.json()["query"]["search"]
+    for info in article:
+      # print(json.dumps(info,indent=4))
+      print(info["title"])
+      print(info["snippet"])
 
     return render_template("search.html",searchterm=searchterm,article=article)
 
