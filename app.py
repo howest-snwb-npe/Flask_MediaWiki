@@ -14,12 +14,12 @@ def search():
     #API code here
     #URL: https://test.wikipedia.org/w/api.php?format=json&action=query&list=search&srsearch=Japan
 
-    url = "https://test.wikipedia.org/w/api.php?format=json&action=query&list=search&srsearch=Japan"
+    url = f"https://test.wikipedia.org/w/api.php?format=json&action=query&list=search&srsearch={searchterm}"
     response = requests.get(url)
 
     article = json.dumps(response.json(), indent=4)
     print(article)
-    
+
     return render_template("search.html",searchterm=searchterm,article=article)
 
 if __name__ == '__main__':
