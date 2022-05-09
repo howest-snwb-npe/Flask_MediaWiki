@@ -4,11 +4,15 @@
         <title>Hello world in Flask</title>
     </head>
     <body>
-        <h1>Enter a search term to find on MediaWiki</h1>
+        <h1>Enter a search term to find an article on MediaWiki</h1>
         <form action="/search" method="GET">
             <input name="searchterm" type="text" placeholder="Search here">
             <input type="submit" value="Search!">
         </form>
-
+        <h1>Enter a search term to find an image on MediaWiki</h1>
+        <form action="/searchimage" method="GET">
+            <input name="searchterm" type="text" placeholder="Search here">
+            <input type="submit" value="Search image!">
+        </form>
     </body>
 </html>
