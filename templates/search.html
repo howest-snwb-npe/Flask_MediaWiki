@@ -6,9 +6,9 @@
     <body>
         <h1>Enter a search term to find on MediaWiki</h1>
         <form action="/search" method="GET">
-            <input name="searchterm" type="text" placeholder="Search here">
+            <input name="searchterm" type="text" placeholder="Search here" value="{{ searchterm }}">
             <input type="submit" value="Search!">
         </form>
-
+        <h2>U zocht naar {{ searchterm }}</h2>
     </body>
 </html>
